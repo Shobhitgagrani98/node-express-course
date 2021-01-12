@@ -1,5 +1,9 @@
-const express = require('express');
-const app = express();
+
+var express = require('express');
+var http = require('http');
+
+var app = express();
+var server = http.createServer(app);
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json())
@@ -51,4 +55,5 @@ app.post('/login',function(req,res){
 
 })
 
-app.listen(8000,function(){console.log('server is listening')})
+app.listen(8000,function(){
+    console.log('Express server listening on port %d', app.address().port)})
