@@ -1,8 +1,8 @@
+const express = require('express');
+const http = require('http');
+const port = 3000
 
-var express = require('express');
-var http = require('http');
-
-var app = express();
+const app = express();
 var server = http.createServer(app);
 const bodyParser = require('body-parser');
 
@@ -55,5 +55,6 @@ app.post('/login',function(req,res){
 
 })
 
-app.listen(8000,function(){
-    console.log('Express server listening on port %d', app.address().port)})
+app.listen(port,() => {
+    console.log('Express server listening at http://localhost:${port}')
+})
