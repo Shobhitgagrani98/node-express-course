@@ -14,6 +14,5 @@ app.get('/users', function(req,res){
     })
 })
 
-app.listen(8000,funtion(){
-console.log("server is running")
+app.listen(8000,funtion(){console.log('server is running')
 })
